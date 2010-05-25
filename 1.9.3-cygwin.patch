@@ -1,0 +1,22 @@
+--- origsrc/aria2-1.9.3/configure.ac	2010-05-09 04:38:41.000000000 -0500
++++ src/aria2-1.9.3/configure.ac	2010-05-24 23:59:32.374491100 -0500
+@@ -11,7 +11,7 @@ AC_CONFIG_SRCDIR([src/a2io.h])
+ AC_CONFIG_HEADERS([config.h])
+ 
+ case "$target" in
+-  *mingw*|*cygwin*)
++  *mingw*)
+     WINSOCK_LIBS="-lws2_32"
+     AC_SUBST(WINSOCK_LIBS)
+     LIBS="-lws2_32 -lcrypto -lwsock32 -lgdi32 -lwinmm $LIBS"
+--- origsrc/aria2-1.9.3/src/common.h	2010-01-05 10:01:46.000000000 -0600
++++ src/aria2-1.9.3/src/common.h	2010-05-25 00:08:49.018329300 -0500
+@@ -60,7 +60,7 @@ typedef _off_t off_t;
+ #endif // __MINGW32__
+ 
+ #ifdef ENABLE_NLS
+-# include "gettext.h"
++# include "libintl.h"
+ # define _(String) gettext(String)
+ #else // ENABLE_NLS
+ # define _(String) String
