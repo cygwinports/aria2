@@ -1,3 +1,0 @@
-DESCRIPTION="Download utility for HTTP/HTTPS, FTP, BitTorrent and Metalink"
-HOMEPAGE="http://aria2.sourceforge.net/"
-SRC_URI="mirror://sourceforge/aria2/${P}.tar.bz2"
