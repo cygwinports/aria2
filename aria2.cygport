@@ -1,5 +1,5 @@
 NAME="aria2"
-VERSION=1.17.1
+VERSION=1.18.9
 RELEASE=1
 CATEGORY="Net Web"
 SUMMARY="Download utility for HTTP/HTTPS, FTP, BitTorrent and Metalink"
@@ -8,7 +8,10 @@ platform download utility operated in command-line. It supports HTTP/HTTPS,
 FTP, BitTorrent and Metalink. You can manipulate aria2 via XML-RPC interface."
 HOMEPAGE="http://aria2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/aria2/aria2-${VERSION}.tar.bz2"
+PATCH_URI="1.18.9-gnu++11.patch"
 
 aria2_REQUIRES="ca-certificates"
 
-CYGCONF_ARGS="--with-ca-bundle=/usr/ssl/certs/ca-bundle.crt"
+CYGCONF_ARGS="--with-ca-bundle=/etc/pki/tls/certs/ca-bundle.crt"
+
+DIFF_EXCLUDES="ax_cxx_compile_stdcxx_11.m4"
