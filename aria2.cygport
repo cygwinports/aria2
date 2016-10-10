@@ -1,5 +1,5 @@
 NAME="aria2"
-VERSION=1.22.0
+VERSION=1.27.1
 RELEASE=1
 CATEGORY="Net Web"
 SUMMARY="Download utility for HTTP/HTTPS, FTP, BitTorrent and Metalink"
@@ -8,6 +8,7 @@ platform download utility operated in command-line. It supports HTTP/HTTPS,
 FTP, BitTorrent and Metalink. You can manipulate aria2 via XML-RPC interface."
 HOMEPAGE="https://aria2.github.io/"
 SRC_URI="https://github.com/aria2/aria2/releases/download/release-${VERSION}/aria2-${VERSION}.tar.xz"
+PATCH_URI="1.27.1-no-undefined.patch"
 
 aria2_REQUIRES="ca-certificates"
 

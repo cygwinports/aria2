@@ -1,0 +1,10 @@
+--- origsrc/aria2-1.27.1/src/Makefile.am	2016-09-16 19:15:32.000000000 -0500
++++ src/aria2-1.27.1/src/Makefile.am	2016-10-09 21:26:04.041017600 -0500
+@@ -731,6 +731,7 @@ AM_LDFLAGS = \
+ 
+ EXTLDADD = @ALLOCA@ \
+ 	@EXTRALIBS@ \
++	@INTLLIBS@ \
+ 	@ZLIB_LIBS@ \
+ 	@LIBUV_LIBS@ \
+ 	@XML_LIBS@ \
