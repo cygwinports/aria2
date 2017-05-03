@@ -1,5 +1,5 @@
 NAME="aria2"
-VERSION=1.27.1
+VERSION=1.31.0
 RELEASE=1
 CATEGORY="Net Web"
 SUMMARY="Download utility for HTTP/HTTPS, FTP, BitTorrent and Metalink"
@@ -14,4 +14,4 @@ aria2_REQUIRES="ca-certificates"
 
 CYGCONF_ARGS="--with-ca-bundle=/etc/pki/tls/certs/ca-bundle.crt"
 
-DIFF_EXCLUDES="ax_cxx_compile_stdcxx_11.m4"
+DIFF_EXCLUDES="ax_*.m4"
